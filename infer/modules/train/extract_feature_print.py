@@ -59,7 +59,9 @@ model_path = "assets/hubert/hubert_base.pt"
 printt("exp_dir: " + exp_dir)
 wavPath = f"{model_name}/1_16k_wavs".format(exp_dir)
 outPath = (
-    f"{model_name}/3_feature256".format(exp_dir) if version == "v1" else f"{model_name}/3_feature768".format(exp_dir)
+    f"{model_name}/3_feature256".format(exp_dir)
+    if version == "v1"
+    else f"{model_name}/3_feature768".format(exp_dir)
 )
 os.makedirs(outPath, exist_ok=True)
 
